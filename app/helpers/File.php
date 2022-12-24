@@ -33,11 +33,11 @@ class File
     public static function validate(array $file, string $message, array $mimeTypes, array $errors = []): array
     {
         if (!$file) {
-            $errors['file'] = $message;
+            $errors['avatar'] = $message;
         }
-        if ($file['error'] === 0) {
+        if (isset($file['error']) && $file['error'] === 0) {
             if (!in_array(mime_content_type($file['tmp_name']), $mimeTypes)) {
-                $errors['file'] = $message;
+                $errors['avatar'] = $message;
             }
         }
 

@@ -1,10 +1,7 @@
 <?php
-ob_start();
-session_start();
-// session_destroy();
-include_once 'app/commons/db.php';
-include_once 'app/commons/define.php';
-include_once 'app/models/model.php';
+
+include_once 'autoload.php';
+require_once 'app/controllers/BookController.php';
 
 ?>
 <!DOCTYPE html>
@@ -32,14 +29,13 @@ include_once 'app/models/model.php';
 
 <?php
 $page = "home";
-if (file_exists('app/view/' . $page . '.php')) {
+if (file_exists('app/views/books/create.php')) {
     ?>
     <body>
     <?php
 
-    include_once 'app/controllers/Controller.php';
-    $controll = new UserController();
-    $controll->Controllers();
+    $userControllers = new BookController();
+    $userControllers->confirm();
     ?>
     </body>
     <?php
@@ -48,4 +44,3 @@ if (file_exists('app/view/' . $page . '.php')) {
 }
 ?>
 </html>
- 

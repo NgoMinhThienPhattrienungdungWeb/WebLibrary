@@ -30,7 +30,7 @@ class UserController
         switch ($page) {
             case 'user_add_complete':
             case "home":
-                include_once "./app/view/" . $page . ".php";
+                include_once "./app/views/" . $page . ".php";
                 break;
             case 'login':
                 date_default_timezone_set('Asia/Ho_Chi_Minh');
@@ -82,7 +82,7 @@ class UserController
             case "resetpassword":
 
 
-                include_once "./app/view/" . $page . ".php";
+                include_once "./app/views/" . $page . ".php";
                 break;
             case 'user_add_input':
                 $reg = "/^[0-9]{1,2}\\/[0-9]{1,2}\\/[0-9]{4}$/";
@@ -188,7 +188,7 @@ class UserController
                         exit();
                     }
                 }
-                include_once "./app/view/" . $page . ".php";
+                include_once "./app/views/" . $page . ".php";
                 break;
             case 'user_add_confirm':
                 date_default_timezone_set("Asia/Ho_Chi_Minh");
@@ -229,7 +229,7 @@ class UserController
 
 
                 }
-                include_once "./app/view/" . $page . ".php";
+                include_once "./app/views/" . $page . ".php";
                 break;
 
         }

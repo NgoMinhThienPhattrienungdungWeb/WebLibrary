@@ -5,4 +5,7 @@ const DB_USER = 'b27d608ba391ff';
 
 const DB_PASSWORD = '29e1d52c';
 
-define("ROOT", $_SERVER['DOCUMENT_ROOT']);
+define("ROOT", dirname(__FILE__, 3));
+
+
+define( 'URI', $_SERVER['REQUEST_URI'] );
